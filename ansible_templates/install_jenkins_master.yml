@@ -21,7 +21,7 @@
     - name: Setup Jenkins Repo
       get_url:
         url: https://pkg.jenkins.io/redhat/jenkins.repo
-        dest: /etc/yu,.repos.d/jenkins.repo
+        dest: /etc/yum.repos.d/jenkins.repo
 
     - name: Import Jenkins Repo GPG key
       rpm_key:
