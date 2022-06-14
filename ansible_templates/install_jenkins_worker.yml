@@ -41,10 +41,10 @@
       yum:
         name: "{{ package }}"
       vars: 
-      package:
-      - wget
-      - java-1.8.0-openjdk-devel
-      - git
+        package:
+        - wget
+        - java-1.8.0-openjdk-devel
+        - git
 
     - name: Get Jenkins cli jar file
       vars:
@@ -61,10 +61,10 @@
 
     - name: Place Jenkins Auth file
       copy: 
-      src: jenkins_auth
-      dest: /home/ec2-user/
-      owner: ec2-user
-      mode: '0600'
+        src: jenkins_auth
+        dest: /home/ec2-user/
+        owner: ec2-user
+        mode: '0600'
 
     - name: Create Jenkins Credentials
       vars:
